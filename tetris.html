@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetris Game</title>
+    <link rel="stylesheet" href="tetris.css">
+</head>
+<body>
+    <h1>Tetris Game</h1>
+    <div class="main-container">
+        <div class="rules-container">
+            <h2>Game Rules: Let the Tetris Begin!</h2>
+            <div>
+                <p>Welcome to Tetris! 🧩 Your goal is to clear lines by arranging falling blocks. The faster and smarter you play, the higher your score!</p>
+                <ul>
+                    <li><strong>Mission:</strong> Arrange falling blocks to clear lines. The more you clear, the higher your score!</li>
+                    <li><strong>Controls:</strong> Use <strong>arrow keys</strong> to move, rotate, and speed up blocks:</li>
+                    <li><strong>Left Arrow:</strong> Move left.</li>
+                    <li><strong>Right Arrow:</strong> Move right.</li>
+                    <li><strong>Down Arrow:</strong> Speed up the fall.</li>
+                    <li><strong>Up Arrow:</strong> Rotate the block.</li>
+                    <li><strong>Game Over:</strong> If blocks reach the top, it's game over!</li>
+                    <li><strong>Scoring:</strong> 15 points for each line cleared. More lines = more points!</li>
+                </ul>
+            </div>
+        </div>
+    
+        <div id="gameContainer">
+            <div>
+                <div id="tetrisGrid"></div>
+            </div>
+        </div>
+
+        <div class="user-ack">
+            <div class="next-shape">
+                <h3>Next Shape:</h3>
+                <div id="nextShapeGrid"></div>
+            </div>
+            
+            <div id="scoreBoard">
+                <p>Score: <span id="score">0</span></p>
+                <p>Top Score: <span id="topScore">0</span></p>
+                <p>Time: <span id="gameTime">00:00</span></p>
+            </div>
+            <div>
+                <label for="speedControl">Step Delay:</label>
+                <input type="range" id="speedControl" min="100" max="1000" value="500" step="100">
+            </div>
+            <div>
+                <button id="startButton">Start Game</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="tetris.js"></script>
+</body>
+</html>
